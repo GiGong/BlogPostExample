@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -9,6 +10,12 @@ namespace ReadExcelData
 {
     public class Program
     {
+        // for closing excel app
+        // https://www.codeproject.com/Questions/74980/Close-Excel-Process-with-Interop
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+
+
         public static void Main(string[] args)
         {
             Console.Write("input path of excel: ");
@@ -57,6 +64,7 @@ namespace ReadExcelData
                 throw new ArgumentOutOfRangeException();
             }
 
+            uint excelProcessId = 0;
             Excel.Application excelApp = null;
             Excel.Workbook wb = null;
             Excel.Worksheet ws = null;
@@ -67,6 +75,7 @@ namespace ReadExcelData
             {
                 // 엑셀 프로그램 실행
                 excelApp = new Excel.Application();
+                GetWindowThreadProcessId(new IntPtr(excelApp.Hwnd), out excelProcessId);
 
                 // 엑셀 파일 열기
                 wb = excelApp.Workbooks.Open(path);
@@ -77,11 +86,11 @@ namespace ReadExcelData
                 // 현재 Worksheet에서 사용된 Range 전체를 선택
                 Excel.Range rng = ws.UsedRange;
 
-                int row = ws.UsedRange.EntireRow.Count;
+                //int row = ws.UsedRange.EntireRow.Count;
+                //Excel.Range rng = ws.Range[ws.Cells[1, 1], ws.Cells[row, numOfColumn]];
 
-                //Excel.Range rng = ws.Range[ws.Cells[1, 1], ws.Cells[row, Column]];
 
-                // Range 데이타를 배열 (One-based array)로
+                // Range 데이타를 배열 (1-based array)로
                 object[,] data = (object[,])rng.Value;
 
                 for (int r = 1; r <= data.GetLength(0); r++)
@@ -116,7 +125,7 @@ namespace ReadExcelData
 
                 }
 
-                wb.Close(true);
+                wb.Close(false);
                 excelApp.Quit();
             }
             catch (Exception)
@@ -129,6 +138,11 @@ namespace ReadExcelData
                 ReleaseExcelObject(ws);
                 ReleaseExcelObject(wb);
                 ReleaseExcelObject(excelApp);
+
+                if (excelApp != null && excelProcessId > 0)
+                {
+                    Process.GetProcessById((int)excelProcessId).Kill();
+                }
             }
 
             return result.ToArray();
