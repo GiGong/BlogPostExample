@@ -11,7 +11,7 @@ namespace ReadExcelData
     public class Program
     {
         // for closing excel app
-        // https://www.codeproject.com/Questions/74980/Close-Excel-Process-with-Interop
+        // https://www.codeproject.com/Answers/74997/Close-Excel-Process-with-Interop#answer1
         [DllImport("user32.dll", SetLastError = true)]
         static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
 
