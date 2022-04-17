@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadExcelData", "ReadExcelData\ReadExcelData.csproj", "{BE6CAC9C-BC9D-42C4-A9F9-C442087D5D7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadExcelData", "ReadExcelData\ReadExcelData.csproj", "{BE6CAC9C-BC9D-42C4-A9F9-C442087D5D7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{A68DC6AB-8FDC-4B2F-9B70-0C29C9F35FD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextBox_Input_Filter", "WPF\TextBox_Input_Filter\TextBox_Input_Filter.csproj", "{384BE951-259D-4521-8A3D-C3B87F63EEE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{BE6CAC9C-BC9D-42C4-A9F9-C442087D5D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE6CAC9C-BC9D-42C4-A9F9-C442087D5D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE6CAC9C-BC9D-42C4-A9F9-C442087D5D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{384BE951-259D-4521-8A3D-C3B87F63EEE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384BE951-259D-4521-8A3D-C3B87F63EEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384BE951-259D-4521-8A3D-C3B87F63EEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384BE951-259D-4521-8A3D-C3B87F63EEE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{384BE951-259D-4521-8A3D-C3B87F63EEE1} = {A68DC6AB-8FDC-4B2F-9B70-0C29C9F35FD0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3299D503-9E1E-4E6B-A7B0-4797331C59FF}
