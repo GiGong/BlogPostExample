@@ -1,6 +1,8 @@
+[English](README.en.md) 👈
+
 # GiGong blog post sample
 
-제 [블로그](https://www.gigong.io/)에서 포스팅하는 내용을 예시 프로젝트로 만들어서 보관하는 저장소입니다.
+[블로그](https://www.gigong.io/)에서 포스팅하는 내용의 예시 프로젝트 저장소 입니다.
 
 .NET 6.0 기반입니다.
 
