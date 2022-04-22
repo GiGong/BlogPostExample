@@ -1,0 +1,26 @@
+﻿<Window x:Class="PlayMusicFile.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PlayMusicFile"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="360" ResizeMode="NoResize"
+        Closing="Window_Closing">
+    <Grid>
+        <Label Name="lblFileName" Content="File Name" HorizontalAlignment="Center" Margin="0,80,0,0" VerticalAlignment="Top" Width="200"
+               HorizontalContentAlignment="Center"/>
+        <Label Name="lblMusicPosition" Content="Time Position" Margin="0,125,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="150"
+               HorizontalContentAlignment="Center"/>
+
+        <Button Content="Open" Width="50" HorizontalAlignment="Left" Margin="30,200,0,0" VerticalAlignment="Top"
+                Click="Open_Click"/>
+        <Button Content="Pause" Width="50" HorizontalAlignment="Left" Margin="110,200,0,0" VerticalAlignment="Top"
+                Click="Pause_Click"/>
+        <Button Content="Play" Width="50" HorizontalAlignment="Left" Margin="190,200,0,0" VerticalAlignment="Top"
+                Click="Play_Click"/>
+        <Button Content="Stop" Width="50" HorizontalAlignment="Left" Margin="270,200,0,0" VerticalAlignment="Top"
+                Click="Stop_Click"/>
+
+    </Grid>
+</Window>
