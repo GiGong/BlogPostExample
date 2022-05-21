@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{7562
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadExcelData", "Console\ReadExcelData\ReadExcelData.csproj", "{40E9D11E-033F-4C3E-A316-4946BC42C1A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeToStringFormat", "Console\DateTimeToStringFormat\DateTimeToStringFormat.csproj", "{47ECA4E2-F28E-41C5-AB13-4DEFCE8FDFE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{40E9D11E-033F-4C3E-A316-4946BC42C1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40E9D11E-033F-4C3E-A316-4946BC42C1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40E9D11E-033F-4C3E-A316-4946BC42C1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47ECA4E2-F28E-41C5-AB13-4DEFCE8FDFE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47ECA4E2-F28E-41C5-AB13-4DEFCE8FDFE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47ECA4E2-F28E-41C5-AB13-4DEFCE8FDFE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47ECA4E2-F28E-41C5-AB13-4DEFCE8FDFE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{384BE951-259D-4521-8A3D-C3B87F63EEE1} = {A68DC6AB-8FDC-4B2F-9B70-0C29C9F35FD0}
 		{AAE62734-CAD0-44DB-A448-1AC6D217E9A8} = {A68DC6AB-8FDC-4B2F-9B70-0C29C9F35FD0}
 		{40E9D11E-033F-4C3E-A316-4946BC42C1A8} = {75622152-6ADC-4D41-B6C8-DC71CB15A309}
+		{47ECA4E2-F28E-41C5-AB13-4DEFCE8FDFE5} = {75622152-6ADC-4D41-B6C8-DC71CB15A309}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3299D503-9E1E-4E6B-A7B0-4797331C59FF}
