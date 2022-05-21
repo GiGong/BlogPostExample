@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Input;
 
-namespace TextBox_Input_Filter
+namespace TextBoxInputFilter
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
