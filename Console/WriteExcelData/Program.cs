@@ -118,7 +118,6 @@ namespace WriteExcelData
             }
             catch (Exception e)
             {
-                string test = e.GetType().Name;
                 if (wb != null)
                 {
                     wb.Close(SaveChanges: false);
@@ -129,7 +128,6 @@ namespace WriteExcelData
                 }
 
                 return false;
-                throw;
             }
             finally
             {
@@ -141,7 +139,6 @@ namespace WriteExcelData
                 {
                     Process.GetProcessById((int)excelProcessId).Kill();
                 }
-
             }
 
             return true;
