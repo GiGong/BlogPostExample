@@ -20,7 +20,7 @@ namespace WriteExcelData
         {
             Console.Write("Input Excel file path (if empty, set current location): ");
             string? input = Console.ReadLine();
-            string path = !string.IsNullOrWhiteSpace(input) ? input : Path.GetFullPath("./Write ExcelData.xlsx");
+            string path = Path.GetFullPath (!string.IsNullOrWhiteSpace(input) ? input : "./Write ExcelData.xlsx");
 
             string[][] excelData = new string[ROW_COUNT][];
             excelData[0] = new string[] { "A", "B", "A * B" };
